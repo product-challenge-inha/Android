@@ -1,6 +1,9 @@
+@file:Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    kotlin("kapt")
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -57,4 +60,23 @@ dependencies {
     androidTestImplementation(platform(libs.compose.bom))
     androidTestImplementation(libs.bundles.ui.test)
     debugImplementation(libs.bundles.compose.debug)
+
+    // hilt
+    implementation(libs.hilt.android)
+    implementation(libs.hilt.navigation.compose)
+    kapt(libs.hilt.andorid.compiler)
+
+    // hilt with compose navigation
+    implementation(libs.hilt.navigation.compose)
+
+    // compose navigation
+    implementation(libs.navigation.compose)
+
+    // retrofit & okhttp
+    implementation(libs.bundles.retrofit2)
+    implementation(libs.bundles.okhttp3)
+}
+
+kapt {
+    correctErrorTypes = true
 }

@@ -1,11 +1,24 @@
 [versions]
 ktx = "1.8.0"
 lifecycleRuntimeKtx = "2.3.1"
+androidActivity = "1.5.0"
 activityCompose = "1.5.1"
 composeBom = "2022.10.00"
 junit = "4.13.2"
 androidJunit = "1.1.5"
 espressoCore = "3.5.1"
+navigation = "2.5.3"
+hilt = "2.44"
+hiltNavigationCompose = "1.0.0"
+javax_inject = "1"
+
+androidGradlePlugin = "8.0.1"
+kotlinAndroid = "1.7.20"
+
+okhttp3 = "4.10.0"
+retrofit2 = "2.9.0"
+
+coroutine = "1.7.3"
 
 [libraries]
 android-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -16,6 +29,10 @@ compose-ui = { group = "androidx.compose.ui", name = "ui" }
 compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
+
+androidx-activity = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityCompose" }
+andoridx-fragment = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "activityCompose" }
 
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 android-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidJunit" }
@@ -25,9 +42,31 @@ android-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-andorid-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+
+okhttp3-okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp3" }
+okhttp3-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3" }
+
+retrofit2-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit2" }
+retrofit2-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit2" }
+
+coroutine = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutine"}
+coroutine_test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutine" }
+
+
 [bundles]
 compose = ["android-ktx", "android-lifecycle", "android-activity-compose", "compose-ui", "compose-ui-graphics", "compose-ui-tooling-preview", "compose-material3"]
 compose-debug = ["compose-ui-tooling", "compose-ui-test-manifest"]
 ui-test = ["android-junit", "espresso-core", "android-ui-test-junit4"]
+okhttp3 = ["okhttp3-okhttp", "okhttp3-logging-interceptor"]
+retrofit2 = ["retrofit2-retrofit", "retrofit2-converter-gson"]
+coroutine = ["coroutine", "coroutine_test"]
+by-viewmodel = ["androidx-activity", "andoridx-fragment"]
 
 [plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin"}
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinAndroid" }
