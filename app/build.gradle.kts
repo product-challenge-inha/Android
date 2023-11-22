@@ -80,6 +80,13 @@ dependencies {
     // firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.cloud.messaging)
+
+    // chart
+    implementation(libs.madrapps.plot)
+
+    // cameraX
+    implementation(libs.bundles.camerax)
+    implementation(libs.mlkit)
 }
 
 kapt {

@@ -74,6 +74,9 @@ mlkit = { module = "com.google.mlkit:barcode-scanning", version.ref = "mlkit" }
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
 firebase-cloud-messaging = { group = "com.google.firebase", name = "firebase-messaging-ktx" }
 
+# chart
+madrapps-plot = { group = "com.github.madrapps", name = "plot", version = "0.1.1" }
+
 [bundles]
 compose = ["android-ktx", "android-lifecycle", "android-activity-compose", "compose-ui", "compose-ui-graphics", "compose-ui-tooling-preview", "compose-material3"]
 compose-debug = ["compose-ui-tooling", "compose-ui-test-manifest"]
@@ -82,6 +85,7 @@ okhttp3 = ["okhttp3-okhttp", "okhttp3-logging-interceptor"]
 retrofit2 = ["retrofit2-retrofit", "retrofit2-converter-gson"]
 coroutine = ["coroutine", "coroutine_test"]
 by-viewmodel = ["androidx-activity", "andoridx-fragment"]
+camerax = ["cameraXCore", "cameraXView", "cameraXLifecycle", "cameraXCamera2"]
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
