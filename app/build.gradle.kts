@@ -78,7 +78,7 @@ dependencies {
     implementation(libs.bundles.okhttp3)
 
     // firebase
-    implementation(libs.firebase.bom)
+    implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.cloud.messaging)
 }
 
