@@ -20,6 +20,9 @@ retrofit2 = "2.9.0"
 
 coroutine = "1.7.3"
 
+cameraX = "1.2.1"
+mlkit = "17.0.3"
+
 [libraries]
 android-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
 android-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
@@ -31,6 +34,7 @@ compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling
 compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
 
+# used for by viewmodels()
 androidx-activity = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityCompose" }
 andoridx-fragment = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "activityCompose" }
 
@@ -55,6 +59,13 @@ retrofit2-converter-gson = { group = "com.squareup.retrofit2", name = "converter
 coroutine = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutine"}
 coroutine_test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutine" }
 
+cameraXCore = { module = "androidx.camera:camera-core", version.ref = "cameraX" }
+cameraXCamera2 = { module = "androidx.camera:camera-camera2", version.ref = "cameraX" }
+cameraXLifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "cameraX" }
+cameraXView = { module = "androidx.camera:camera-view", version.ref = "cameraX" }
+
+# used for qr code regonization
+mlkit = { module = "com.google.mlkit:barcode-scanning", version.ref = "mlkit" }
 
 [bundles]
 compose = ["android-ktx", "android-lifecycle", "android-activity-compose", "compose-ui", "compose-ui-graphics", "compose-ui-tooling-preview", "compose-material3"]
