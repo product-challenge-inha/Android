@@ -23,6 +23,9 @@ coroutine = "1.7.3"
 cameraX = "1.2.1"
 mlkit = "17.0.3"
 
+googleService = "4.4.0"
+firebaseBom = "32.6.0"
+
 [libraries]
 android-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
 android-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
@@ -67,6 +70,10 @@ cameraXView = { module = "androidx.camera:camera-view", version.ref = "cameraX" 
 # used for qr code regonization
 mlkit = { module = "com.google.mlkit:barcode-scanning", version.ref = "mlkit" }
 
+# firebase
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-cloud-messaging = { group = "com.google.firebase", name = "firebase-messaging-ktx" }
+
 [bundles]
 compose = ["android-ktx", "android-lifecycle", "android-activity-compose", "compose-ui", "compose-ui-graphics", "compose-ui-tooling-preview", "compose-material3"]
 compose-debug = ["compose-ui-tooling", "compose-ui-test-manifest"]
@@ -81,3 +88,4 @@ android-application = { id = "com.android.application", version.ref = "androidGr
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin"}
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinAndroid" }
+google-service = { id = "com.google.gms.google-services", version.ref = "googleService"}

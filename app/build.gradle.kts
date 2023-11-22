@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     kotlin("kapt")
     alias(libs.plugins.hilt)
+    alias(libs.plugins.google.service)
 }
 
 android {
@@ -75,6 +76,10 @@ dependencies {
     // retrofit & okhttp
     implementation(libs.bundles.retrofit2)
     implementation(libs.bundles.okhttp3)
+
+    // firebase
+    implementation(libs.firebase.bom)
+    implementation(libs.firebase.cloud.messaging)
 }
 
 kapt {
