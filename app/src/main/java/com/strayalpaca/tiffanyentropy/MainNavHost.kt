@@ -17,8 +17,8 @@ import com.strayalpaca.tiffanyentropy.presentation.screen.home.HomeScreen
 import com.strayalpaca.tiffanyentropy.presentation.screen.home.HomeViewModel
 import com.strayalpaca.tiffanyentropy.presentation.screen.notification.NotificationScreen
 import com.strayalpaca.tiffanyentropy.presentation.screen.notification.NotificationViewModel
-import com.strayalpaca.tiffanyentropy.presentation.screen.qensorMonitoring.SensorMonitoringScreen
-import com.strayalpaca.tiffanyentropy.presentation.screen.qensorMonitoring.SensorMonitoringViewModel
+import com.strayalpaca.tiffanyentropy.presentation.screen.sensorMonitoring.SensorMonitoringScreen
+import com.strayalpaca.tiffanyentropy.presentation.screen.sensorMonitoring.SensorMonitoringViewModel
 import com.strayalpaca.tiffanyentropy.presentation.screen.qrRecognition.QrRecognitionScreen
 import com.strayalpaca.tiffanyentropy.presentation.screen.qrRecognition.QrRecognitionViewModel
 

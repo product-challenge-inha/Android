@@ -1,15 +1,12 @@
-package com.strayalpaca.tiffanyentropy.presentation.screen.qensorMonitoring
+package com.strayalpaca.tiffanyentropy.presentation.screen.sensorMonitoring
 
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
+import androidx.lifecycle.ViewModel
 import com.madrapps.plot.line.DataPoint
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-@Composable
-fun SensorMonitoringScreen(
-    modifier : Modifier = Modifier,
-    goBack : () -> Unit,
-    viewModel: SensorMonitoringViewModel
-) {
+@HiltViewModel
+class SensorMonitoringViewModel @Inject constructor() : ViewModel() {
 
     val dataPoints1 = listOf(
         DataPoint(0f, 0f),
