@@ -1,14 +1,11 @@
 package com.strayalpaca.tiffanyentropy.presentation.component.block
 
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
-import com.madrapps.plot.line.LinePlot
 import com.madrapps.plot.line.DataPoint
 import com.madrapps.plot.line.LineGraph
+import com.madrapps.plot.line.LinePlot
 
 @Composable
 fun LineGraph(
@@ -16,6 +13,7 @@ fun LineGraph(
     data : List<DataPoint>
 ) {
     LineGraph(
+        modifier = modifier,
         plot = LinePlot(
             listOf(
                 LinePlot.Line(
@@ -27,9 +25,6 @@ fun LineGraph(
             ),
             grid = LinePlot.Grid(Color.Gray, steps = 4),
         ),
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(200.dp),
         onSelection = { xLine, points ->
             // Do whatever you want here
         }
