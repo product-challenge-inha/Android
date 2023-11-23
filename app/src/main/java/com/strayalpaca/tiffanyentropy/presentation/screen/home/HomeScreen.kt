@@ -1,5 +1,10 @@
 package com.strayalpaca.tiffanyentropy.presentation.screen.home
 
+import android.Manifest
+import android.os.Build
+import android.widget.Toast
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -10,10 +15,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.strayalpaca.tiffanyentropy.R
@@ -31,6 +38,7 @@ fun HomeScreen(
     viewModel: HomeViewModel
 ) {
     val showNotificationDot by viewModel.showNotificationDot.collectAsState()
+    val context = LocalContext.current
 
     val homeMenuList = remember {
         listOf(
@@ -53,6 +61,22 @@ fun HomeScreen(
                 onClick = goToCollectionHistory
             ),
         )
+    }
+
+    val launcher =
+        rememberLauncherForActivityResult(
+            ActivityResultContracts.RequestPermission(),
+            onResult = { isGranted ->
+                if (!isGranted) {
+                    Toast.makeText(context, context.getString(R.string.need_push_notification_permission), Toast.LENGTH_SHORT).show()
+                }
+            }
+        )
+
+    LaunchedEffect(Unit) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            launcher.launch(Manifest.permission.POST_NOTIFICATIONS)
+        }
     }
 
     HomeScreenUi(
