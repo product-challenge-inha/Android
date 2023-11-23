@@ -26,6 +26,8 @@ mlkit = "17.0.3"
 googleService = "4.4.0"
 firebaseBom = "32.6.0"
 
+permission = "0.28.0"
+
 [libraries]
 android-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
 android-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
@@ -76,6 +78,9 @@ firebase-cloud-messaging = { group = "com.google.firebase", name = "firebase-mes
 
 # chart
 madrapps-plot = { group = "com.github.madrapps", name = "plot", version = "0.1.1" }
+
+# permission utils
+accompanist-permission = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "permission" }
 
 [bundles]
 compose = ["android-ktx", "android-lifecycle", "android-activity-compose", "compose-ui", "compose-ui-graphics", "compose-ui-tooling-preview", "compose-material3"]

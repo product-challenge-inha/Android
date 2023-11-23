@@ -87,6 +87,9 @@ dependencies {
     // cameraX
     implementation(libs.bundles.camerax)
     implementation(libs.mlkit)
+
+    // permission utils
+    implementation(libs.accompanist.permission)
 }
 
 kapt {
