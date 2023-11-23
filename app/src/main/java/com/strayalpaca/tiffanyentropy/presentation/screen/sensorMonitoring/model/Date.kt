@@ -28,6 +28,10 @@ class Date (
         return dateFormat.format(timeStamp)
     }
 
+    fun getSimpleString() : String {
+        return "${year}-${month}-${day}"
+    }
+
     companion object {
         fun getInstanceFromCurrent() : Date {
             val calendar = Calendar.getInstance()

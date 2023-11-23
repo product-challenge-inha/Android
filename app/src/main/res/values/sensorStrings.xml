@@ -11,4 +11,6 @@
     <string name="form_period">기간 : %s</string>
 
     <string name="change">변경</string>
+
+    <string name="select_area">위치 선택</string>
 </resources>

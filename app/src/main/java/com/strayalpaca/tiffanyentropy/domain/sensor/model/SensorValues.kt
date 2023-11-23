@@ -4,6 +4,6 @@ data class SensorValues(
     val id : Int,
     val areaId : Int,
     val value : Int,
-    val sensorType : SensorTypes,
+    val sensorType : String,
     val createdAt : String
 )
