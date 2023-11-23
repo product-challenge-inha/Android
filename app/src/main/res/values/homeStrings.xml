@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_sensor_monitoring">센서값 모니터링</string>
+    <string name="description_sensor_monitoring">센서값 모니터링에 대한 설명이 들어갑니다.</string>
+
+    <string name="title_qr_recognition">수거함 QR 코드 인식</string>
+    <string name="description_qr_recognition">수거를 진행할 수거함의 QR코드를 인식합니다.</string>
+
+    <string name="title_confirm_collection_history">수거내역 확인</string>
+    <string name="description_confirm_collection_history">수거내역 확인에 대한 설명이 들어갑니다.</string>
+</resources>
